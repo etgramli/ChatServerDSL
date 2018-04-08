@@ -4,5 +4,5 @@ import de.htwg.modellgetrieben.dsl.permission.Permission
 
 interface Channel {
     val name: String
-    val permissions: List<Permission>
+    val permissions: Permission
 }
