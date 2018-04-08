@@ -1,7 +1,7 @@
 package de.htwg.modellgetrieben.dsl.permission
 
 enum class PermissionState {
-    SET,
-    NOTSET,
+    ALLOWED,
+    FORBIDDEN,
     Default,
 }
