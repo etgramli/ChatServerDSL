@@ -1,4 +1,4 @@
-package de.htwg.modellgetrieben.dsl.permission
+package de.htwg.modellgetrieben.dsl.model.permission
 
 data class TextPermission(
         override val createInstantInvite: PermissionState = PermissionState.Default,

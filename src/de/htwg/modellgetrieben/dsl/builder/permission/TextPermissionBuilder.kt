@@ -1,7 +1,7 @@
 package de.htwg.modellgetrieben.dsl.builder.permission
 
-import de.htwg.modellgetrieben.dsl.permission.PermissionState
-import de.htwg.modellgetrieben.dsl.permission.TextPermission
+import de.htwg.modellgetrieben.dsl.model.permission.PermissionState
+import de.htwg.modellgetrieben.dsl.model.permission.TextPermission
 
 fun textpermission(block: TextPermissionBuilder.() -> Unit): TextPermission {
     return TextPermissionBuilder().apply(block).build()

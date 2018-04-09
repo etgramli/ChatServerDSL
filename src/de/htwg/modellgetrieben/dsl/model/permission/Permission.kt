@@ -1,4 +1,4 @@
-package de.htwg.modellgetrieben.dsl.permission
+package de.htwg.modellgetrieben.dsl.model.permission
 
 interface Permission {
     val createInstantInvite: PermissionState

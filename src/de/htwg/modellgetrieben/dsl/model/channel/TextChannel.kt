@@ -1,6 +1,6 @@
-package de.htwg.modellgetrieben.dsl.channel
+package de.htwg.modellgetrieben.dsl.model.channel
 
-import de.htwg.modellgetrieben.dsl.permission.TextPermission
+import de.htwg.modellgetrieben.dsl.model.permission.TextPermission
 
 
 data class TextChannel(

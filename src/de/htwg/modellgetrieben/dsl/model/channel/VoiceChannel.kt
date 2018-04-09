@@ -1,6 +1,6 @@
-package de.htwg.modellgetrieben.dsl.channel
+package de.htwg.modellgetrieben.dsl.model.channel
 
-import de.htwg.modellgetrieben.dsl.permission.VoicePermission
+import de.htwg.modellgetrieben.dsl.model.permission.VoicePermission
 
 
 data class VoiceChannel(
