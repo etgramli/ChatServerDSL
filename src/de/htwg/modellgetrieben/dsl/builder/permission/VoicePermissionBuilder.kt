@@ -1,12 +1,7 @@
-package de.htwg.modellgetrieben.dsl.permission.builders
+package de.htwg.modellgetrieben.dsl.builder.permission
 
 import de.htwg.modellgetrieben.dsl.permission.PermissionState
 import de.htwg.modellgetrieben.dsl.permission.VoicePermission
-
-
-fun voicepermission(block: VoicePermissionBuilder.() -> Unit): VoicePermission {
-    return VoicePermissionBuilder().apply(block).build()
-}
 
 class VoicePermissionBuilder {
     private var createInstantInvite: PermissionState = PermissionState.Default

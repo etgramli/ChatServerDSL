@@ -1,6 +1,6 @@
 package de.htwg.modellgetrieben.dsl
 
-import de.htwg.modellgetrieben.dsl.permission.builders.textpermission
+import de.htwg.modellgetrieben.dsl.builder.permission.textpermission
 
 
 fun main(args: Array<String>) {

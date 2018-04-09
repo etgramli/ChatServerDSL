@@ -1,4 +1,4 @@
-package de.htwg.modellgetrieben.dsl.permission.builders
+package de.htwg.modellgetrieben.dsl.builder.permission
 
 import de.htwg.modellgetrieben.dsl.permission.PermissionState
 import de.htwg.modellgetrieben.dsl.permission.TextPermission
