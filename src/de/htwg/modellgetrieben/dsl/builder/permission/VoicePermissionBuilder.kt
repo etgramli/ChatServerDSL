@@ -5,18 +5,18 @@ import de.htwg.modellgetrieben.dsl.model.permission.PermissionState
 import de.htwg.modellgetrieben.dsl.model.permission.VoicePermission
 
 @ServerDSL
-class VoicePermissionBuilder {
-    private var createInstantInvite: PermissionState = PermissionState.Default
-    private var manageChannel: PermissionState = PermissionState.Default
-    private var managePermissions: PermissionState = PermissionState.Default
-    private var manageWebhooks: PermissionState = PermissionState.Default
-    private var viewChannel: PermissionState = PermissionState.Default
-    private var connect: PermissionState = PermissionState.Default
-    private var speak: PermissionState = PermissionState.Default
-    private var muteMembers: PermissionState = PermissionState.Default
-    private var deafenMembers: PermissionState = PermissionState.Default
-    private var moveMembers: PermissionState = PermissionState.Default
-    private var useVoiceActivity: PermissionState = PermissionState.Default
+class VoicePermissionBuilder(old: VoicePermission) {
+    private var createInstantInvite: PermissionState = old.createInstantInvite
+    private var manageChannel: PermissionState = old.manageChannel
+    private var managePermissions: PermissionState = old.managePermissions
+    private var manageWebhooks: PermissionState = old.manageWebhooks
+    private var viewChannel: PermissionState = old.viewChannel
+    private var connect: PermissionState = old.connect
+    private var speak: PermissionState = old.speak
+    private var muteMembers: PermissionState = old.muteMembers
+    private var deafenMembers: PermissionState = old.deafenMembers
+    private var moveMembers: PermissionState = old.moveMembers
+    private var useVoiceActivity: PermissionState = old.useVoiceActivity
 
 
     fun allowCreateInstantInvite() {

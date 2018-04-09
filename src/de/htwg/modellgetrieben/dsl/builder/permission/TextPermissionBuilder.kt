@@ -5,8 +5,7 @@ import de.htwg.modellgetrieben.dsl.model.permission.PermissionState
 import de.htwg.modellgetrieben.dsl.model.permission.TextPermission
 
 @ServerDSL
-class TextPermissionBuilder(val old : TextPermission) {
-
+class TextPermissionBuilder(old : TextPermission) {
     private var createInstantInvite: PermissionState = old.createInstantInvite
     private var manageChannel: PermissionState = old.manageChannel
     private var managePermissions: PermissionState = old.managePermissions

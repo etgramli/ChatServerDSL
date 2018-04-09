@@ -23,11 +23,6 @@ class TextChannelBuilder {
         permissions = TextPermissionBuilder(permissions).apply(block).build()
     }
 
-    fun build() = TextChannel(
-            name,
-            permissions,
-            isNSFW,
-            topic
-    )
+    fun build() = TextChannel(name, permissions, isNSFW, topic)
 
 }
