@@ -7,7 +7,7 @@ fun textpermission(block: TextPermissionBuilder.() -> Unit): TextPermission {
     return TextPermissionBuilder().apply(block).build()
 }
 
-class TextPermissionBuilder : PermissionBuilder() {
+class TextPermissionBuilder {
 
     private var createInstantInvite: PermissionState = PermissionState.Default
     private var manageChannel: PermissionState = PermissionState.Default
