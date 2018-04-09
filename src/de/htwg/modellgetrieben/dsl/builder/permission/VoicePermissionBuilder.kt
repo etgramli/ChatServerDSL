@@ -1,8 +1,10 @@
 package de.htwg.modellgetrieben.dsl.builder.permission
 
+import de.htwg.modellgetrieben.dsl.builder.server.ServerDSL
 import de.htwg.modellgetrieben.dsl.model.permission.PermissionState
 import de.htwg.modellgetrieben.dsl.model.permission.VoicePermission
 
+@ServerDSL
 class VoicePermissionBuilder {
     private var createInstantInvite: PermissionState = PermissionState.Default
     private var manageChannel: PermissionState = PermissionState.Default

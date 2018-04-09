@@ -3,8 +3,9 @@ package de.htwg.modellgetrieben.dsl.builder.channel
 import de.htwg.modellgetrieben.dsl.model.channel.VoiceChannel
 import de.htwg.modellgetrieben.dsl.model.permission.VoicePermission
 import de.htwg.modellgetrieben.dsl.builder.permission.VoicePermissionBuilder
+import de.htwg.modellgetrieben.dsl.builder.server.ServerDSL
 
-
+@ServerDSL
 class VoiceChannelBuilder {
     var name: String = ""
     var maxUser: Int = 255

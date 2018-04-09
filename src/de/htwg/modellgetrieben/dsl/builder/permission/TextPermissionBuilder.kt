@@ -1,5 +1,6 @@
 package de.htwg.modellgetrieben.dsl.builder.permission
 
+import de.htwg.modellgetrieben.dsl.builder.server.ServerDSL
 import de.htwg.modellgetrieben.dsl.model.permission.PermissionState
 import de.htwg.modellgetrieben.dsl.model.permission.TextPermission
 
@@ -7,6 +8,7 @@ fun textpermission(block: TextPermissionBuilder.() -> Unit): TextPermission {
     return TextPermissionBuilder().apply(block).build()
 }
 
+@ServerDSL
 class TextPermissionBuilder {
 
     private var createInstantInvite: PermissionState = PermissionState.Default
