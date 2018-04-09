@@ -9,11 +9,25 @@ fun main(args: Array<String>) {
 
     val ret = server {
         name = "Kati Winter"
-        voiceChannel {
+        textChannel {
             name = "chatroom"
             permissions {
+                allowAttachFiles()
+                forbidEmbedLinks()
+            }
+        }
+        voiceChannel {
+            name = "Lounge"
+            permissions {
                 allowConnect()
-                forbidDeafenMembers()
+                forbidManagePermissions()
+            }
+        }
+        voiceChannel {
+            name = "Lounge1"
+            permissions {
+                allowConnect()
+                forbidManagePermissions()
             }
         }
     }
