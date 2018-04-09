@@ -5,5 +5,4 @@ interface Permission {
     val manageChannel: PermissionState
     val managePermissions: PermissionState
     val manageWebhooks: PermissionState
-
 }

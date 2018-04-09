@@ -1,18 +1,18 @@
 package de.htwg.modellgetrieben.dsl.permission
 
 data class TextPermission(
-        override val createInstantInvite: PermissionState,
-        override val manageChannel: PermissionState,
-        override val managePermissions: PermissionState,
-        override val manageWebhooks: PermissionState,
-        val readMessages: PermissionState,
-        val sendMessages: PermissionState,
-        val sendTTSMessages: PermissionState,
-        val manageMessages: PermissionState,
-        val embedLinks: PermissionState,
-        val attachFiles: PermissionState,
-        val readMessageHistory: PermissionState,
-        val mentionEveryone: PermissionState,
-        val useExternalEmojis: PermissionState,
-        val addReactions: PermissionState
+        override val createInstantInvite: PermissionState = PermissionState.Default,
+        override val manageChannel: PermissionState = PermissionState.Default,
+        override val managePermissions: PermissionState = PermissionState.Default,
+        override val manageWebhooks: PermissionState = PermissionState.Default,
+        val readMessages: PermissionState? = PermissionState.Default,
+        val sendMessages: PermissionState? = PermissionState.Default,
+        val sendTTSMessages: PermissionState? = PermissionState.Default,
+        val manageMessages: PermissionState? = PermissionState.Default,
+        val embedLinks: PermissionState? = PermissionState.Default,
+        val attachFiles: PermissionState? = PermissionState.Default,
+        val readMessageHistory: PermissionState? = PermissionState.Default,
+        val mentionEveryone: PermissionState? = PermissionState.Default,
+        val useExternalEmojis: PermissionState? = PermissionState.Default,
+        val addReactions: PermissionState? = PermissionState.Default
 ) : Permission
