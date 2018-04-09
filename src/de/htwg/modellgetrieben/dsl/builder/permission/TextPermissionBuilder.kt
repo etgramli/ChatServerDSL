@@ -4,27 +4,23 @@ import de.htwg.modellgetrieben.dsl.builder.server.ServerDSL
 import de.htwg.modellgetrieben.dsl.model.permission.PermissionState
 import de.htwg.modellgetrieben.dsl.model.permission.TextPermission
 
-fun textpermission(block: TextPermissionBuilder.() -> Unit): TextPermission {
-    return TextPermissionBuilder().apply(block).build()
-}
-
 @ServerDSL
-class TextPermissionBuilder {
+class TextPermissionBuilder(val old : TextPermission) {
 
-    private var createInstantInvite: PermissionState = PermissionState.Default
-    private var manageChannel: PermissionState = PermissionState.Default
-    private var managePermissions: PermissionState = PermissionState.Default
-    private var manageWebhooks: PermissionState = PermissionState.Default
-    private var readMessages: PermissionState = PermissionState.Default
-    private var sendMessages: PermissionState = PermissionState.Default
-    private var sendTTSMessages: PermissionState = PermissionState.Default
-    private var manageMessages: PermissionState = PermissionState.Default
-    private var embedLinks: PermissionState = PermissionState.Default
-    private var attachFiles: PermissionState = PermissionState.Default
-    private var readMessageHistory: PermissionState = PermissionState.Default
-    private var mentionEveryone: PermissionState = PermissionState.Default
-    private var useExternalEmojis: PermissionState = PermissionState.Default
-    private var addReactions: PermissionState = PermissionState.Default
+    private var createInstantInvite: PermissionState = old.createInstantInvite
+    private var manageChannel: PermissionState = old.manageChannel
+    private var managePermissions: PermissionState = old.managePermissions
+    private var manageWebhooks: PermissionState = old.manageWebhooks
+    private var readMessages: PermissionState = old.readMessages
+    private var sendMessages: PermissionState = old.sendMessages
+    private var sendTTSMessages: PermissionState = old.sendTTSMessages
+    private var manageMessages: PermissionState = old.manageMessages
+    private var embedLinks: PermissionState = old.embedLinks
+    private var attachFiles: PermissionState = old.attachFiles
+    private var readMessageHistory: PermissionState = old.readMessageHistory
+    private var mentionEveryone: PermissionState = old.mentionEveryone
+    private var useExternalEmojis: PermissionState = old.useExternalEmojis
+    private var addReactions: PermissionState = old.addReactions
 
 
     fun allowCreateInstantInvite() {
