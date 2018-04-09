@@ -7,9 +7,14 @@ import de.htwg.modellgetrieben.dsl.model.permission.VoicePermission
 
 @ServerDSL
 class VoiceChannelBuilder {
+    companion object {
+        val maxUsersMaxValue = 255
+        val bitRateMaxValue = 320
+    }
+
     var name: String = ""
-    var maxUser: Int = 255
-    var bitrate: Int = 320
+    var maxUser: Int = maxUsersMaxValue
+    var bitrate: Int = bitRateMaxValue
 
     private var permissions: VoicePermission = VoicePermission.default()
 
