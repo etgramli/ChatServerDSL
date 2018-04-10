@@ -24,6 +24,11 @@ class TextChannelBuilder {
         permissions = TextPermissionBuilder(permissions).apply(block).build()
     }
 
-    fun build() = TextChannel(name, permissions, isNSFW, topic)
+    fun build(): TextChannel {
+        val name = this.name.trim()
+        if (name.isEmpty())
+            throw IllegalArgumentException("Textchannel name is empty")
+        return TextChannel(name, permissions, isNSFW, topic)
+    }
 
 }

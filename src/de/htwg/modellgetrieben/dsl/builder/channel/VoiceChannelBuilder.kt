@@ -24,6 +24,9 @@ class VoiceChannelBuilder {
     }
 
     fun build(): VoiceChannel {
+        val name = this.name.trim()
+        if (name.isEmpty())
+            throw IllegalArgumentException("Voice channel name is empty")
         return VoiceChannel(name, permissions, maxUser, bitrate)
 
     }

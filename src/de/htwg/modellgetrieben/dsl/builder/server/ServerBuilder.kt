@@ -27,6 +27,9 @@ class ServerBuilder {
     }
 
     fun build(): Server {
+        val name = this.name.trim()
+        if (!name.isNotEmpty())
+            throw IllegalStateException("Server name is empty or blank!")
         return Server(name, textChannel, voiceChannel)
     }
 
