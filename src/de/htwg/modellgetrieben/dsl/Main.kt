@@ -4,11 +4,8 @@ import de.htwg.modellgetrieben.dsl.builder.server.server
 
 
 fun main(args: Array<String>) {
-    val scope = "DSL"
-    println("Hello, $scope!")
-
-    val ret = server {
-        name = "Kati Winter"
+    val dsl = server {
+        name = "Discord"
         textChannel {
             name = "chatroom"
             permissions {
@@ -18,6 +15,7 @@ fun main(args: Array<String>) {
         }
         voiceChannel {
             name = "Lounge"
+            bitrate = 160
             permissions {
                 allowConnect()
                 forbidManagePermissions()
@@ -25,6 +23,7 @@ fun main(args: Array<String>) {
         }
         voiceChannel {
             name = "Lounge1"
+            maxUser = 5
             permissions {
                 allowConnect()
                 forbidManagePermissions()
@@ -32,6 +31,6 @@ fun main(args: Array<String>) {
         }
     }
 
-    println(ret)
+    println(dsl)
 
 }
