@@ -6,6 +6,7 @@ import de.htwg.modellgetrieben.dsl.model.channel.TextChannel
 import de.htwg.modellgetrieben.dsl.model.permission.TextPermission
 
 
+@Suppress("unused")
 @ServerDSL
 class TextChannelBuilder {
 

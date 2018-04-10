@@ -4,6 +4,7 @@ import de.htwg.modellgetrieben.dsl.builder.server.ServerDSL
 import de.htwg.modellgetrieben.dsl.model.permission.PermissionState
 import de.htwg.modellgetrieben.dsl.model.permission.TextPermission
 
+@Suppress("unused")
 @ServerDSL
 class TextPermissionBuilder(old : TextPermission) {
     private var createInstantInvite: PermissionState = old.createInstantInvite

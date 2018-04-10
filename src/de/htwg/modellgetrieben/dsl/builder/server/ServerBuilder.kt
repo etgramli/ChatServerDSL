@@ -9,6 +9,7 @@ import de.htwg.modellgetrieben.dsl.model.server.Server
 fun server(block: ServerBuilder.() -> Unit): Server =
         ServerBuilder().apply(block).build()
 
+@Suppress("unused")
 @ServerDSL
 class ServerBuilder {
 

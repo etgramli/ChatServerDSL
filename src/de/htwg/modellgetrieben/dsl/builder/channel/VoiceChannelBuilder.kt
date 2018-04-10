@@ -5,6 +5,7 @@ import de.htwg.modellgetrieben.dsl.builder.server.ServerDSL
 import de.htwg.modellgetrieben.dsl.model.channel.VoiceChannel
 import de.htwg.modellgetrieben.dsl.model.permission.VoicePermission
 
+@Suppress("unused")
 @ServerDSL
 class VoiceChannelBuilder {
     companion object {
