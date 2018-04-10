@@ -13,6 +13,18 @@ fun main(args: Array<String>) {
                 forbidEmbedLinks()
             }
         }
+        textChannel {
+            name = "scala"
+            setNSFW()
+            permissions {
+                forbidAddReactions()
+                forbidEmbedLinks()
+                forbidAttachFiles()
+            }
+            topic = """
+                    Discussion on whether or not we should use Scala in mgse.
+            """.trimIndent()
+        }
         voiceChannel {
             name = "Lounge"
             bitrate = 160
