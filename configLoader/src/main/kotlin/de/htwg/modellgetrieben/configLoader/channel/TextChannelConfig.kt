@@ -3,7 +3,7 @@ package de.htwg.modellgetrieben.configLoader.channel
 import de.htwg.modellgetrieben.configLoader.permission.PermissionState
 
 interface TextChannelConfig {
-    fun createTextChannel(name: String, topic: String, isNSFW: Boolean)
+    fun createTextChannel(name: String)
 
     fun setName(name: String)
     fun setTopic(topic: String)

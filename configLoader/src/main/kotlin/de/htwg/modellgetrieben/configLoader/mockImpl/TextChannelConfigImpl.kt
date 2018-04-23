@@ -5,12 +5,8 @@ import de.htwg.modellgetrieben.configLoader.permission.PermissionState
 
 class TextChannelConfigImpl(name: String): TextChannelConfig {
 
-    override fun createTextChannel(name: String,
-                                   topic: String,
-                                   isNSFW: Boolean) {
+    override fun createTextChannel(name: String) {
         setName(name)
-        setTopic(topic)
-        setIsNSFW(isNSFW)
     }
 
     override fun setName(name: String) {

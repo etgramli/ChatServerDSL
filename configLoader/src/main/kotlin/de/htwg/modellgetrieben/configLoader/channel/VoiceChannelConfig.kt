@@ -3,7 +3,7 @@ package de.htwg.modellgetrieben.configLoader.channel
 import de.htwg.modellgetrieben.configLoader.permission.PermissionState
 
 interface VoiceChannelConfig {
-    fun createVoiceChannel(name: String, maxUser: Int, bitrate: Int)
+    fun createVoiceChannel(name: String)
 
     fun setName (name: String)
     fun setMaxUsers(number: Int)
