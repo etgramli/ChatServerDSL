@@ -1,12 +1,23 @@
 package de.htwg.modellgetrieben.configLoader.channel
 
-import de.htwg.modellgetrieben.dsl.model.channel.VoiceChannel
-
 interface VoiceChannelConfig {
-    fun createVoiceChannel(voiceChannel: VoiceChannel) {
-        println(voiceChannel.name)
-        println(voiceChannel.maxUser)
-        println(voiceChannel.bitrate)
+    fun createVoiceChannel(name: String,
+                           maxUser: Int,
+                           bitrate: Int) {
+        setName(name)
+        setMaxUsers(maxUser)
+        setBitrate(bitrate)
         //println(voiceChannel.permissions)
     }
+
+    fun setName (name: String) {
+        println("Voice channel name: $name")
+    }
+    fun setMaxUsers(number: Int) {
+        println("Max number of users: $number")
+    }
+    fun setBitrate(bitrate: Int) {
+        println("Bitrate: $bitrate")
+    }
+    // ToDo: permissions: VoicePermission,
 }
