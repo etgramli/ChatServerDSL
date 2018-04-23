@@ -1,4 +1,4 @@
-package de.htwg.modellgetrieben.dsl.ConfigLoader.permission
+package de.htwg.modellgetrieben.configLoader.permission
 
 import de.htwg.modellgetrieben.dsl.model.permission.TextPermission
 

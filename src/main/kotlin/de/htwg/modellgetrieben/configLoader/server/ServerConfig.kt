@@ -1,4 +1,4 @@
-package de.htwg.modellgetrieben.dsl.ConfigLoader.server
+package de.htwg.modellgetrieben.configLoader.server
 
 import de.htwg.modellgetrieben.dsl.model.server.Server
 

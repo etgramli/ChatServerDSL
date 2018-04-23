@@ -1,4 +1,4 @@
-package de.htwg.modellgetrieben.dsl.ConfigLoader.channel
+package de.htwg.modellgetrieben.configLoader.channel
 
 import de.htwg.modellgetrieben.dsl.model.channel.VoiceChannel
 
