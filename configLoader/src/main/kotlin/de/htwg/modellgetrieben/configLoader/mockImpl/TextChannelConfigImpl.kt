@@ -5,10 +5,6 @@ import de.htwg.modellgetrieben.configLoader.permission.PermissionState
 
 class TextChannelConfigImpl(name: String): TextChannelConfig {
 
-    override fun createTextChannel(name: String) {
-        setName(name)
-    }
-
     override fun setName(name: String) {
         println("Text channel name: $name")
     }

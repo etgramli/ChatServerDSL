@@ -4,9 +4,6 @@ import de.htwg.modellgetrieben.configLoader.channel.VoiceChannelConfig
 import de.htwg.modellgetrieben.configLoader.permission.PermissionState
 
 class VoiceChannelConfigImpl(name: String) : VoiceChannelConfig {
-    override fun createVoiceChannel(name: String) {
-        setName(name)
-    }
 
     override fun setName(name: String) {
         println("Voice channel name: $name")
