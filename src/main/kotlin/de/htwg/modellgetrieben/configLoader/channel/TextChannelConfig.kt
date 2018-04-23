@@ -1,12 +1,22 @@
 package de.htwg.modellgetrieben.configLoader.channel
 
-import de.htwg.modellgetrieben.dsl.model.channel.TextChannel
-
 interface TextChannelConfig {
-    fun createTextChannel(textChannel: TextChannel) {
-        println(textChannel.name)
-        println(textChannel.topic)
-        println(textChannel.isNSFW)
+    fun createTextChannel(name: String,
+                          topic: String,
+                          isNSFW: Boolean) {
+        setName(name)
+        setTopic(topic)
+        setIsNSFW(isNSFW)
         //println(textChannel.permissions)
+    }
+
+    fun setName(name: String) {
+        println("Text channel name: $name")
+    }
+    fun setTopic(topic: String) {
+        println("Topic: $topic")
+    }
+    fun setIsNSFW(isNSFW: Boolean) {
+        println("Is NSFW: $isNSFW")
     }
 }
