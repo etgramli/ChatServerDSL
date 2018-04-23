@@ -19,16 +19,12 @@
    <artifactId>kotlin-stdlib</artifactId>
    <version>${kotlin.version}</version>
   </dependency>
-  <dependency>
-   <groupId>org.antlr</groupId>
-   <artifactId>stringtemplate</artifactId>
-   <version>4.0.2</version>
-  </dependency>
  </dependencies>
 
  <modules>
   <module>configLoader</module>
   <module>internalDsl</module>
+  <module>generated</module>
  </modules>
 
  <build>
