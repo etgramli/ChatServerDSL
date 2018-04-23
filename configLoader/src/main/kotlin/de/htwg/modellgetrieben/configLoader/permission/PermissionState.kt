@@ -1,4 +1,4 @@
-package de.htwg.modellgetrieben.configLoader.mockImpl
+package de.htwg.modellgetrieben.configLoader.permission
 
 enum class PermissionState {
     ALLOWED,

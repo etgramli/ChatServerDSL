@@ -1,22 +1,26 @@
 package de.htwg.modellgetrieben.configLoader.channel
 
-interface TextChannelConfig {
-    fun createTextChannel(name: String,
-                          topic: String,
-                          isNSFW: Boolean) {
-        setName(name)
-        setTopic(topic)
-        setIsNSFW(isNSFW)
-        //println(textChannel.permissions)
-    }
+import de.htwg.modellgetrieben.configLoader.permission.PermissionState
 
-    fun setName(name: String) {
-        println("Text channel name: $name")
-    }
-    fun setTopic(topic: String) {
-        println("Topic: $topic")
-    }
-    fun setIsNSFW(isNSFW: Boolean) {
-        println("Is NSFW: $isNSFW")
-    }
+interface TextChannelConfig {
+    fun createTextChannel(name: String, topic: String, isNSFW: Boolean)
+
+    fun setName(name: String)
+    fun setTopic(topic: String)
+    fun setIsNSFW(isNSFW: Boolean)
+
+    fun setCreateInstantInvite(state: PermissionState)
+    fun setManageChannel(state: PermissionState)
+    fun setManagePermissions(state: PermissionState)
+    fun setManageWebhooks(state: PermissionState)
+    fun setReadMessages(state: PermissionState)
+    fun setSendMessages(state: PermissionState)
+    fun setSendTTSMessages(state: PermissionState)
+    fun setManageMessages(state: PermissionState)
+    fun setEmbedLinks(state: PermissionState)
+    fun setAttachFiles(state: PermissionState)
+    fun setReadMessageHistory(state: PermissionState)
+    fun setMentionEveryone(state: PermissionState)
+    fun setUseExternalEmojis(state: PermissionState)
+    fun setAddReactions(state: PermissionState)
 }
