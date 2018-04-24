@@ -1,6 +1,7 @@
 package de.htwg.modellgetrieben.dsl
 
 import de.htwg.modellgetrieben.dsl.builder.server.server
+import de.htwg.modellgetrieben.dsl.generation.STGenerator
 
 
 fun main(args: Array<String>) {
@@ -43,6 +44,8 @@ fun main(args: Array<String>) {
         }
     }
 
-    println(dsl)
+    // println(dsl)
 
+    println("\n\n")
+    println(STGenerator.generate(listOf(dsl)))
 }

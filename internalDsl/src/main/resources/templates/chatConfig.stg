@@ -1,0 +1,37 @@
+config(servers) ::= <<
+import de.htwg.modellgetrieben.configLoader.mockImpl.ConfigImpl
+import de.htwg.modellgetrieben.configLoader.permission.PermissionState
+
+fun main(args: Array\<String\>) {
+  val config = ConfigImpl()
+  <servers:server()>
+}
+>>
+
+
+server(s) ::= <<
+config.createServer("<s.name>").let { server ->
+  <s.textChannel:textChannel(); separator="\n\n">
+  <s.voiceChannel:voiceChannel(); separator="\n\n">
+}
+>>
+
+textChannel(c) ::=<<
+server.addTextChannel("<c.name>").let { textChannel ->
+  <if(c.isNSFW)>textChannel.setIsNSFW(<c.isNSFW>)<endif>
+  <if(c.topic)>textChannel.setTopic("<c.topic>")<endif>
+  <permission(c.permissions, "textChannel")>
+}
+>>
+
+voiceChannel(c) ::=<<
+server.addVoiceChannel("<c.name>").let { voiceChannel ->
+  voiceChannel.setMaxUsers(<c.maxUser>)
+  voiceChannel.setBitrate(<c.bitrate>)
+  <permission(c.permissions, "voiceChannel")>
+}
+>>
+
+permission(plist, var) ::=<<
+<plist:{ p |<var>.set<p.first>(PermissionState.<p.second>)}; separator="\n">
+>>
