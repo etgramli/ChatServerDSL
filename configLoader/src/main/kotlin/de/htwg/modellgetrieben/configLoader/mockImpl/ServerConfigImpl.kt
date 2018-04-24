@@ -12,22 +12,20 @@ class ServerConfigImpl(name: String) : ServerConfig {
 
     override fun addTextChannel(name: String): TextChannelConfig {
         println("Text channel: $name")
-
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return TextChannelConfigImpl(name)
     }
 
     override fun addVoiceChannel(name: String): VoiceChannelConfig {
         println("Voice channel: $name")
-
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return VoiceChannelConfigImpl(name)
     }
 
     override fun loadTextChannelConfig(name: String): TextChannelConfig {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return TextChannelConfigImpl(name)
     }
 
     override fun loadVoiceChannelConfig(name: String): VoiceChannelConfig {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return VoiceChannelConfigImpl(name)
     }
 
 
